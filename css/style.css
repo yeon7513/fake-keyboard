@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/* common font-family */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;}
+
+/* colors */
+:root {
+  --main-color: #EEF7FF;
+  --common-color: #CDE8E5;
+  --accent-color: #7AB2B2;
+  --hover-color: #233A38;
+  --font-color: #4D869C;
+  --press-color: #BBF1DF;
+}
+
+/* common */
+html, body {
+  width: 100%;
+  height: 100%;
+  color: var(--font-color);
+}
+
+
+/* layout */
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 3px 0 var(--common-color);
+  color: var(--accent-color);
+}
+
+input {
+  padding: 10px;
+  width: 500px;
+  border: 0;
+  outline: 0;
+  border: 1px solid var(--common-color);
+  color: var(--font-color);
+  transition: 0.3s;
+}
+input:focus {
+  box-shadow: 0 2px 5px 0 rgba(77, 134, 156, 0.3);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.events {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 500px;
+  border: 1px solid var(--common-color);
+}
+.event {
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+}
+.event:not(:last-child) {
+  border-right: 1px solid var(--common-color);
+}
+
+#keydown.check {
+  background-color: var(--common-color);
+  color: var(--accent-color);
+}
+#keypress.check {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+}
+#keyup.check {
+  background-color: var(--common-color);
+  color: var(--accent-color);
+}
+
+#keyboard {
+  margin-top: 10px;
+  width: 700px;
+}
+
+.function-keys {
+  display: flex;
+  justify-content: space-between;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  width: 43px;
+  height: 43px;
+  border: 1px solid var(--common-color);
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 2px 0 1px rgba(122, 178, 178, 0.5);
+}
+
+.on {
+  box-shadow: 0 0 0 0 rgba(122, 178, 178, 0.5);
+  background-color: var(--font-color);
+  color: var(--common-color);
+  transform: translateY(2px);
+}
+
+#Backspace, 
+#Tab {
+  width: 79px;
+}
+
+#CapsLock, 
+#Enter {
+  width: 86px;
+}
+
+#ShiftLeft, 
+#ShiftRight {
+  width: 110px;
+}
+
+#Space {
+  width: 284px;
+}
+
+#ControlLeft, 
+#ControlRight, 
+#AltLeft, 
+#AltRight,
+#MetaLeft, 
+#MetaRight {
+  width: 50px;
+}
